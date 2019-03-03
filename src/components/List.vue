@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 // 引入vuex
 import store from "@/store";
 
