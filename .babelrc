@@ -1,23 +1,15 @@
 {
     "presets": [
-        ["env", {
-        "modules": false,
-        "targets": {
-            "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
-        }
-        }],
-        "stage-2"
+      ["env", { "modules": false }],
+      "stage-2"
     ],
-    "plugins": ["transform-vue-jsx", "transform-runtime",["component", [
-        {
-        "libraryName": "mint-ui",  // 针对mint-ui按需打包
-        "style": true  // 表明这里不需要手动引入mint-ui的样式，会自动导入
-    }
-    ]]],
+    "plugins": ["transform-runtime"],
+    "comments": false,
     "env": {
-        "test": {
+      "test": {
         "presets": ["env", "stage-2"],
-        "plugins": ["transform-vue-jsx", "istanbul"]
-        }
+        "plugins": [ "istanbul" ]
+      }
     }
-}
+  }
+  
